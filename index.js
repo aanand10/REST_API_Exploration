@@ -4,9 +4,32 @@ const users = require("./Data/MOCK_DATA.json");
 
 const app = express();
 const PORT = 1010;
-//MiddleWare : plugin
+//MiddleWare : here are a functions which
 app.use(express.urlencoded({ extended: false }));
+
+// middleware have access of request object , res object , next middleware function
+app.use((req, res, next) => {
+  console.log("Hello from the middleware 1");
+  //   return res.end("Hello from middleware 2"); // this reurns and ends the req cycle before forwarding it to next middleware or next avaliable functions
+  next(); // this sends to the next middleware or next fucntion in the stack , if we dont use this the request won't be forwarded it will hang up in between
+});
+
+app.use((req, res, next) => {
+  req.name = "Anand"; // as using middleware we can manupulate the req data , that data will get avaliable to the next middlewares and the functions
+  //like we can first authenticate the user and then we can forward it or the important data of its get sent to the next of the functions if that user is not valid we can end that request
+  next();
+});
+
+app.use((req, res, next) => {
+  fs.appendFile(
+    "./Data/log.txt",
+    `${Date.now()} : ${req.method} : ${req.path} \n`,
+    (err, data) => {}
+  );
+  next();
+});
 // routes
+
 app.get("/users", (req, res) => {
   /**
    * we will return HTML so the structure will be like

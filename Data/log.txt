@@ -1,0 +1,10 @@
+
+1716461271419 : GET : /api/users 
+1716461393200 : GET : /api/users 
+1716461394042 : GET : /api/users 
+1716461394825 : GET : /api/users 
+1716461395590 : GET : /api/users 
+1716461397989 : GET : /users 
+1716461398718 : GET : /users 
+1716467753056 : DELETE : /api/users/1003 
+1716467761217 : GET : /users 

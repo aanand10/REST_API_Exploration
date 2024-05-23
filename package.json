@@ -8,7 +8,7 @@
   "main": "index.js",
   "devDependencies": {},
   "scripts": {
-    "start": "node index.js"
+    "start": "nodemon ./index.js localhost 1010"
   },
   "keywords": [
     "RESTful",
