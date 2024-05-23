@@ -55,6 +55,9 @@ app
   .get((req, res) => {
     const id = Number(req.params.id);
     console.log(id);
+    if (id > users.length) {
+      res.status(404).send({ msg: "Please enter valid user id" });
+    }
     const userWithId = users.find((user) => user.id === id);
     return res.json(userWithId);
   })
@@ -91,6 +94,16 @@ app
 app.post("/api/users", (req, res) => {
   //TODO : create new user
   const body = req.body;
+  if (
+    !body ||
+    !body.first_name ||
+    !body.last_name ||
+    !body.job_title ||
+    !body.email ||
+    !body.gender
+  ) {
+    res.status(400).send({ msg: "please enter full data" });
+  }
   console.log("REQ Body", body);
 
   users.push({
@@ -99,7 +112,7 @@ app.post("/api/users", (req, res) => {
   });
 
   fs.writeFile("./Data/MOCK_DATA.json", JSON.stringify(users), (err, data) => {
-    return res.json({ status: "Success", id: users.length });
+    return res.status(201).json({ status: "Success", id: users.length });
   });
 });
 
