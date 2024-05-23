@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "name": "rest_api_exploration",
+  "description": "A repository documenting my journey of learning RESTful API development.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "RESTful",
+    "API",
+    "Exploration"
+  ],
+  "author": "Anand suryawanshi",
+  "license": "MIT"
+}
