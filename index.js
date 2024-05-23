@@ -44,6 +44,8 @@ ${users.map((user) => `<li>${user.first_name}</li>`).join("")}
 });
 
 app.get("/api/users", (req, res) => {
+  console.log(req.headers);
+  res.setHeader("X-myName", "Anand"); // custom header : always append X infront of custom headers
   return res.json(users);
 });
 
