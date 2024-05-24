@@ -7,6 +7,13 @@ Dynamic Path user
 GET /api/users/:id  - get users with id  ✅
 :id => it is a variable
 
-POST /api/users - create new users 
-PATCH /api/user/:id - edit user with give id 
-DELETE /api/users/:id - delete user with give id
+POST /api/users - create new users ✅
+PATCH /api/user/:id - edit user with give id ✅
+DELETE /api/users/:id - delete user with give id✅
+
+---------------------------------------------------------------------------------------
+mongo : 
+
+Schema - Define the structure
+    Schema - modal 
+    using modal we can do CRUD operations 
