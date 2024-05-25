@@ -1,0 +1,18 @@
+
+ 1716621205290 : GET : /users 
+
+ 1716621274580 : GET : / 
+
+ 1716621384795 : GET : /users 
+
+ 1716621385124 : GET : /users 
+
+ 1716621501878 : GET : /user 
+
+ 1716621782808 : GET : /api/users 
+
+ 1716621821146 : POST : /api/users 
+
+ 1716621832281 : GET : /api/users/665191fd7551d4d9ade12b43 
+
+ 1716621852731 : PATCH : /api/users/665191fd7551d4d9ade12b43 
